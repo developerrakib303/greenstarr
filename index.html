@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Star Aircon Pte Ltd</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+    <!-- Custom CSS -->
+    <!-- Fancybox removed — using custom lightbox -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="100">
+
+    <!-- Top Bar -->
+    <div class="top-bar py-2 bg-light-green text-center d-lg-block border-bottom"
+        style="background-color: #ecfdf5; font-size: 13px;">
+        <div class="container">
+            <div
+                class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center gap-1">
+                <div class="text-dark-slate">
+                    Running daily 8am - 8pm | Same-day servicing available
+                </div>
+                <div>
+                    <a href="https://wa.me/6594499767" target="_blank"
+                        class="text-green text-decoration-none fw-bold d-flex align-items-center justify-content-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                        </svg>
+                        WhatsApp Us: <span class="text-decoration-underline">9449 9767</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom py-3" id="mainNavbar">
+        <div class="container">
+            <!-- Logo (Image) -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="logo.png" alt="Green Star Aircon Pte Ltd" class="d-none"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Fallback Logo Structure as provided in previous code, adjusted layout -->
+                <div class="d-flex align-items-center gap-2">
+                    <div class="text-green">
+                        <!-- Icon Placeholder if needed or use image -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-green">
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <path d="M20 16l-4-4 4-4"></path>
+                            <path d="M4 8l4 4-4 4"></path>
+                            <path d="M16 4l-4 4-4-4"></path>
+                            <path d="M8 20l4-4 4 4"></path>
+                        </svg>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <span class="fs-5 fw-bold text-uppercase brand-text text-dark-slate lh-1">GREEN STAR</span>
+                        <span style="font-size: 10px; letter-spacing: 1px; font-weight: 600;"
+                            class="text-uppercase text-secondary">AIRCON PTE LTD</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Mobile Burger (Visible on Mobile) -->
+            <button class="navbar-toggler border-0 p-0 ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-label="Toggle navigation" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-dark-slate">
+                    <line x1="4" x2="20" y1="12" y2="12" />
+                    <line x1="4" x2="20" y1="6" y2="6" />
+                    <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+            </button>
+
+            <!-- Navigation Menu (Desktop: Center/Right) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Mobile Menu Header -->
+                <div class="mobile-menu-header d-lg-none">
+                    <div class="d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-green">
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <path d="M20 16l-4-4 4-4"></path>
+                            <path d="M4 8l4 4-4 4"></path>
+                            <path d="M16 4l-4 4-4-4"></path>
+                            <path d="M8 20l4-4 4 4"></path>
+                        </svg>
+                        <div>
+                            <span class="fw-bold text-dark-slate">GREEN STAR</span>
+                            <div class="text-secondary" style="font-size: 9px; letter-spacing: 1px;">AIRCON PTE LTD
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mobile-menu-close-btn" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-label="Close menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mb-3 mb-lg-0 fw-semibold text-uppercase"
+                    style="font-size: 0.85rem; letter-spacing: 0.5px;">
+                    <li class="nav-item"><a class="nav-link text-dark-slate" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-slate" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-slate" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-slate" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-slate" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-slate" href="#reviews">Reviews</a></li>
+                </ul>
+
+                <!-- Book Now Button (Desktop: Far Right) -->
+                <div class="ms-lg-4 d-none d-lg-block">
+                    <a href="#booking"
+                        class="btn btn-green rounded-pill px-4 py-2 d-flex align-items-center gap-2 shadow-sm">
+                        Book Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Book Button -->
+                <div class="d-lg-none mt-3">
+                    <a href="#booking"
+                        class="btn btn-green w-100 rounded-3 py-2 d-flex align-items-center justify-content-center gap-2">
+                        Book Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Footer -->
+                <div class="mobile-menu-footer d-lg-none">
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <span class="fw-medium">+65 XXXX XXXX</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </div>
+                            <span class="fw-medium">info@greenstar.com.sg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Backdrop -->
+    <div class="navbar-backdrop"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-slider-section position-relative overflow-hidden text-white">
+        <!-- Slider Container -->
+        <div class="hero-slider-container h-100">
+            <!-- Slide 1 -->
+            <div class="hero-slide active h-100 w-100 position-absolute top-0 start-0">
+                <div class="hero-bg"
+                    style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop');">
+                </div>
+                <div class="hero-overlay"></div>
+                <div class="container h-100 position-relative z-2">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-8 col-xl-7">
+                            <div class="slide-content">
+                                <div class="badge-tag d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4 border border-light border-opacity-25"
+                                    style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-green">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <span class="text-uppercase fw-bold"
+                                        style="font-size: 0.75rem; letter-spacing: 1px; color: #86efac;">Transparent &
+                                        Reliable</span>
+                                </div>
+                                <h1 class="display-3 fw-bold mb-4 lh-tight">
+                                    Trusted by Thousands<br>
+                                    <span class="text-green">No Hidden Costs</span>
+                                </h1>
+                                <p class="lead text-light mb-5 opacity-90" style="font-size: 1.1rem; max-width: 600px;">
+                                    Our BCA-certified technicians provide honest diagnostics, transparent pricing, and a
+                                    90-day workmanship warranty you can rely on.
+                                </p>
+                                <div class="hero-cta d-flex flex-wrap gap-3">
+                                    <a href="#booking"
+                                        class="btn btn-green rounded-2 px-4 py-3 fw-bold d-flex align-items-center gap-2">
+                                        Book Appointment <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="m12 5 7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://wa.me/6594499767" target="_blank"
+                                        class="btn btn-outline-white rounded-2 px-4 py-3 fw-bold d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
+                                        </svg> WhatsApp Us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <!-- Curve Swipe Transition Overlay -->
+    <div id="curveSwipeOverlay" class="curve-swipe-overlay">
+        <svg viewBox="0 0 1440 800" preserveAspectRatio="none" class="curve-swipe-svg">
+            <path d="M0,0 L1440,0 L1440,800 Q720,600 0,800 Z" fill="#0f172a" />
+        </svg>
+    </div>
+
+    <!-- Frustrations Section -->
+    <section class="py-5 bg-light position-relative overflow-hidden" id="nextSection">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Left Side Grid -->
+                <div class="col-lg-7">
+                    <span class="text-green fw-bold text-uppercase small ls-1">Common Frustrations</span>
+                    <h2 class="display-6 fw-bold text-dark mt-2 mb-4">Is your Aircon acting up?</h2>
+                    <p class="text-secondary mb-5">Don't let these common issues disrupt your comfort. Identify your
+                        problem below — we fix them all at the source.</p>
+
+                    <div class="row g-3">
+                        <!-- Problem Items -->
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/water-leak.png" width="40" height="40"
+                                        alt="Water Leaking"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Water Leaking</h6>
+                                    <p class="small text-muted mb-0">Dripping units or wet trunking.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/not-cold.png" width="40" height="40"
+                                        alt="Not Cold"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Not Cold</h6>
+                                    <p class="small text-muted mb-0">Room stays warm or humid.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/auto-off.png" width="40" height="40"
+                                        alt="Auto-Off"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Auto-Off</h6>
+                                    <p class="small text-muted mb-0">Unit cuts off randomly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/high-bills.png" width="40" height="40"
+                                        alt="High Bills"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">High Bills</h6>
+                                    <p class="small text-muted mb-0">Spike in electricity usage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/blinking-light.png" width="40"
+                                        height="40" alt="Blinking Light"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Blinking Light</h6>
+                                    <p class="small text-muted mb-0">Timer light flashing error.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/noisy-unit.png" width="40" height="40"
+                                        alt="Noisy Unit"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Noisy Unit</h6>
+                                    <p class="small text-muted mb-0">Rattling or buzzing sounds.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/bad-smell.png" width="40" height="40"
+                                        alt="Bad Smell"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Bad Smell</h6>
+                                    <p class="small text-muted mb-0">Musty or foul odors.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div
+                                class="bg-white p-3 rounded-3 border d-flex flex-column flex-sm-row align-items-start gap-3 shadow-sm h-100">
+                                <div class="bg-light p-2 rounded"><img src="icon/poor-airflow.png" width="40"
+                                        height="40" alt="Poor Airflow"></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Poor Airflow</h6>
+                                    <p class="small text-muted mb-0">Weak wind from vents.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side Card -->
+                <div class="col-lg-5">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-lg-custom border sticky-top" style="top: 100px;">
+                        <h3 class="fw-bold mb-3 text-dark">Your #1 Choice for <br><span class="text-green">All Aircon
+                                Problems</span></h3>
+                        <p class="text-secondary small mb-4" style="line-height: 1.6;">
+                            You can be <span class="fw-bold text-dark text-decoration-underline">100% assured</span>
+                            that when we leave, your aircon problems leave with us.
+                        </p>
+
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <!-- Card 1: Warranty -->
+                            <div class="p-3 rounded-3 d-flex align-items-center gap-3"
+                                style="background-color: #ecfdf5; border: 1px solid #d1fae5;">
+                                <div class="bg-white p-2 rounded-circle shadow-sm text-green d-flex justify-content-center align-items-center"
+                                    style="width: 40px; height: 40px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                        <path d="m9 12 2 2 4-4" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">90-Day Warranty</h6>
+                                    <p class="small text-muted mb-0" style="font-size: 0.85rem;">On all workmanship &
+                                        parts</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Trusted Experts -->
+                            <div class="p-3 rounded-3 d-flex align-items-center gap-3"
+                                style="background-color: #eff6ff; border: 1px solid #dbeafe;">
+                                <div class="bg-white p-2 rounded-circle shadow-sm text-primary d-flex justify-content-center align-items-center"
+                                    style="width: 40px; height: 40px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 10v12" />
+                                        <path
+                                            d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 1 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">Trusted Experts</h6>
+                                    <p class="small text-muted mb-0" style="font-size: 0.85rem;">Over 7,000 happy homes
+                                        served</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Rating -->
+                            <div class="p-3 rounded-3 d-flex align-items-center gap-3"
+                                style="background-color: #ffffff; border: 1px solid #e2e8f0;">
+                                <div class="bg-white p-2 rounded-circle shadow-sm d-flex justify-content-center align-items-center"
+                                    style="width: 40px; height: 40px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px"
+                                        height="20px">
+                                        <path fill="#FFC107"
+                                            d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                        <path fill="#FF3D00"
+                                            d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                        <path fill="#4CAF50"
+                                            d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                        <path fill="#1976D2"
+                                            d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark d-flex align-items-center gap-2">
+                                        4.9/5 Rating
+                                        <div class="d-flex text-warning">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon
+                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon
+                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon
+                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon
+                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon
+                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                            </svg>
+                                        </div>
+                                    </h6>
+                                    <p class="small text-muted mb-0" style="font-size: 0.85rem;">Google Customer Reviews
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="btn bg-slate-900 text-white w-100 py-3 rounded-3 fw-bold mb-3 d-flex align-items-center justify-content-center gap-2 shadow-lg btn-hover-scale"
+                            style="background-color: #0f172a;">
+                            Book Your Slot Now <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <div class="text-center d-flex align-items-center justify-content-center gap-2 mt-2">
+                            <span class="bg-green rounded-circle d-inline-block"
+                                style="width:8px;height:8px; animation: pulse 2s infinite; box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);"></span>
+                            <small class="text-secondary fw-medium" style="font-size: 0.85rem;">Limited slots available
+                                for this week</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light-subtle">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="text-green fw-bold text-uppercase small ls-1">Our Expertise</span>
+                <h2 class="display-5 fw-bold mt-2">Comprehensive Aircon Solutions</h2>
+                <p class="text-secondary mx-auto" style="max-width: 600px;">From routine maintenance to complex
+                    installations, our certified technicians deliver excellence in every service.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1: General Servicing -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="bg-white rounded-4 shadow-custom overflow-hidden h-100 service-card-hover group service-card-mobile-layout">
+                        <div class="position-relative mobile-img-col">
+                            <img src="img/general-servicing.png" class="w-100 object-fit-cover mobile-img-reset"
+                                style="height: 240px;" alt="General Servicing">
+                        </div>
+                        <div class="mobile-text-col p-4">
+                            <h5 class="fw-bold mb-2">General Servicing</h5>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6;">Comprehensive 10-step
+                                cleaning process to ensure your unit runs efficiently.</p>
+                            <a href="https://wa.me/6594499767?text=Hi, I am interested in General Servicing service"
+                                target="_blank"
+                                class="btn btn-light w-100 fw-bold py-2 d-flex align-items-center justify-content-center gap-2"
+                                style="font-size: 0.9rem; background: #f8fafc; color: #0f172a;">
+                                Book Service
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#25D366"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Chemical Wash -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="bg-white rounded-4 shadow-custom overflow-hidden h-100 service-card-hover group service-card-mobile-layout">
+                        <div class="position-relative mobile-img-col">
+                            <img src="img/chemical-wash.png" class="w-100 object-fit-cover mobile-img-reset"
+                                style="height: 240px;" alt="Chemical Wash">
+                        </div>
+                        <div class="mobile-text-col p-4">
+                            <h5 class="fw-bold mb-2">Chemical Wash</h5>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6;">Deep cleaning to remove
+                                stubborn grime, mold, and bacteria from the coil.</p>
+                            <a href="https://wa.me/6594499767?text=Hi, I am interested in Chemical Wash service"
+                                target="_blank"
+                                class="btn btn-light w-100 fw-bold py-2 d-flex align-items-center justify-content-center gap-2"
+                                style="font-size: 0.9rem; background: #f8fafc; color: #0f172a;">
+                                Book Service
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#25D366"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Chemical Overhaul -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="bg-white rounded-4 shadow-custom overflow-hidden h-100 service-card-hover group service-card-mobile-layout">
+                        <div class="position-relative mobile-img-col">
+                            <img src="img/chemical-overhaul.png" class="w-100 object-fit-cover mobile-img-reset"
+                                style="height: 240px;" alt="Chemical Overhaul">
+                        </div>
+                        <div class="mobile-text-col p-4">
+                            <h5 class="fw-bold mb-2">Chemical Overhaul</h5>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6;">Full dismantling of the unit
+                                for a thorough chemical bath of all parts.</p>
+                            <a href="https://wa.me/6594499767?text=Hi, I am interested in Chemical Overhaul service"
+                                target="_blank"
+                                class="btn btn-light w-100 fw-bold py-2 d-flex align-items-center justify-content-center gap-2"
+                                style="font-size: 0.9rem; background: #f8fafc; color: #0f172a;">
+                                Book Service
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#25D366"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Gas Top-Up -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="bg-white rounded-4 shadow-custom overflow-hidden h-100 service-card-hover group service-card-mobile-layout">
+                        <div class="position-relative mobile-img-col">
+                            <img src="img/gas-top-up.png" class="w-100 object-fit-cover mobile-img-reset"
+                                style="height: 240px;" alt="Gas Top-Up">
+                        </div>
+                        <div class="mobile-text-col p-4">
+                            <h5 class="fw-bold mb-2">Gas Top-Up</h5>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6;">Restore cooling power by
+                                replenishing refrigerant levels effectively.</p>
+                            <a href="https://wa.me/6594499767?text=Hi, I am interested in Gas Top-Up service"
+                                target="_blank"
+                                class="btn btn-light w-100 fw-bold py-2 d-flex align-items-center justify-content-center gap-2"
+                                style="font-size: 0.9rem; background: #f8fafc; color: #0f172a;">
+                                Book Service
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#25D366"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Repair & Troubleshooting -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="bg-white rounded-4 shadow-custom overflow-hidden h-100 service-card-hover group service-card-mobile-layout">
+                        <div class="position-relative mobile-img-col">
+                            <img src="img/repair-troubleshooting.png" class="w-100 object-fit-cover mobile-img-reset"
+                                style="height: 240px;" alt="Repair & Troubleshooting">
+                        </div>
+                        <div class="mobile-text-col p-4">
+                            <h5 class="fw-bold mb-2">Repair & Troubleshooting</h5>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6;">Expert diagnosis and repair
+                                for leaking, noise, or power issues.</p>
+                            <a href="https://wa.me/6594499767?text=Hi, I am interested in Repair & Troubleshooting service"
+                                target="_blank"
+                                class="btn btn-light w-100 fw-bold py-2 d-flex align-items-center justify-content-center gap-2"
+                                style="font-size: 0.9rem; background: #f8fafc; color: #0f172a;">
+                                Book Service
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#25D366"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: New Installation -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="bg-white rounded-4 shadow-custom overflow-hidden h-100 service-card-hover group service-card-mobile-layout">
+                        <div class="position-relative mobile-img-col">
+                            <img src="img/new-installation.png" class="w-100 object-fit-cover mobile-img-reset"
+                                style="height: 240px;" alt="New Installation">
+                        </div>
+                        <div class="mobile-text-col p-4">
+                            <h5 class="fw-bold mb-2">New Installation</h5>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6;">Professional installation of
+                                top brands with workmanship warranty.</p>
+                            <a href="https://wa.me/6594499767?text=Hi, I am interested in New Installation service"
+                                target="_blank"
+                                class="btn btn-light w-100 fw-bold py-2 d-flex align-items-center justify-content-center gap-2"
+                                style="font-size: 0.9rem; background: #f8fafc; color: #0f172a;">
+                                Book Service
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#25D366"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Prop Section - Glassmorphism Design -->
+    <section class="py-5 bg-gradient-mesh position-relative">
+        <!-- Decorative Gradient Orbs -->
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="gradient-orb gradient-orb-3"></div>
+
+        <div class="container py-5 position-relative" style="z-index: 1;">
+            <div class="text-center mb-5 fade-in-up">
+                <span class="d-inline-block px-4 py-2 glass-badge text-green rounded-pill small fw-bold mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                        <path d="M5 3v4" />
+                        <path d="M9 3v4" />
+                        <path d="M21 3v4" />
+                        <path d="M17 3v4" />
+                        <path d="M12 8v4" />
+                        <path d="M2 12h4" />
+                        <path d="M18 12h4" />
+                        <path d="M12 16v4" />
+                        <path d="M5 21v-4" />
+                        <path d="M9 21v-4" />
+                        <path d="M21 21v-4" />
+                        <path d="M17 21v-4" />
+                    </svg>
+                    PREMIUM STANDARDS
+                </span>
+                <h2 class="display-5 fw-bold mb-3">
+                    What You Get When You Pick <br>
+                    <span class="gradient-text">Green Star Quality Services</span>
+                </h2>
+                <p class="text-secondary mx-auto" style="max-width: 600px;">
+                    We go beyond just cooling. We provide a complete, hassle-free experience designed for modern
+                    Singaporean homes.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 01 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card reveal-on-scroll">
+                        <span class="number-indicator">01</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5" />
+                                <path d="M16 12h4" />
+                                <path d="M16 16h4" />
+                            </svg>
+                        </div>
+                        <h5>Singapore's Most Affordable</h5>
+                        <p>Our client-centric business model allows us to be the most competitively priced in Singapore.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card reveal-on-scroll">
+                        <span class="number-indicator">02</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                <line x1="16" x2="16" y1="2" y2="6" />
+                                <line x1="8" x2="8" y1="2" y2="6" />
+                                <line x1="3" x2="21" y1="10" y2="10" />
+                            </svg>
+                        </div>
+                        <h5>Quarterly Cleaning Packages</h5>
+                        <p>Stay on top of your air conditioner repair and servicing schedule and enhance lifespan.</p>
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card reveal-on-scroll">
+                        <span class="number-indicator">03</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <polyline points="16 11 18 13 22 9" />
+                            </svg>
+                        </div>
+                        <h5>Well-Trained Technicians</h5>
+                        <p>All our technicians have a minimum of 5 years experience with various aircon brands.</p>
+                    </div>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card reveal-on-scroll">
+                        <span class="number-indicator">04</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                                <path d="M12 18h.01" />
+                            </svg>
+                        </div>
+                        <h5>Tech-Enabled Convenience</h5>
+                        <p>Our services are supported digitally, from invoices to contracts. No more misplacing papers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 05 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card reveal-on-scroll">
+                        <span class="number-indicator">05</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h5>Excellent Service Guaranteed</h5>
+                        <p>Experiencing leaking after your general servicing? You're covered by our warranty.</p>
+                    </div>
+                </div>
+
+                <!-- Card 06 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card reveal-on-scroll">
+                        <span class="number-indicator">06</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="19" x2="5" y1="5" y2="19" />
+                                <circle cx="6.5" cy="6.5" r="2.5" />
+                                <circle cx="17.5" cy="17.5" r="2.5" />
+                            </svg>
+                        </div>
+                        <h5>Frequent Promos & Discounts</h5>
+                        <p>On top of our affordable prices, Green Star Aircon also offers promotions regularly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 position-relative">
+                    <div class="rounded-4 overflow-hidden shadow-lg-custom position-relative">
+                        <img src="img/why-choose-us.png" class="w-100" style="height: 500px; object-fit: cover;">
+                        <div class="position-absolute top-0 end-0 m-4 bg-white p-3 rounded-3 shadow text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="text-green mb-1">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                            <div class="text-dark fw-bold" style="font-size: 10px; line-height: 1.2;">BCA<br>Certified
+                            </div>
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 m-4 ms-n2 bg-white p-3 rounded-3 shadow d-flex align-items-center gap-3 animate-bounce-slow"
+                            style="max-width: 280px;">
+                            <div class="bg-green-light p-2 rounded-circle text-green"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg></div>
+                            <div>
+                                <div class="fw-bold small">100% Satisfaction</div>
+                                <div class="text-muted" style="font-size: 11px;">Guaranteed or we fix it for free.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-green fw-bold text-uppercase small ls-1 d-block mb-2">Why Choose Us</span>
+                    <h2 class="display-5 fw-bold mb-4">For Aircon Servicing <br><span class="text-green">In
+                            Singapore?</span></h2>
+                    <p class="text-secondary mb-5">At Green Star Aircon, we combine <strong>technical expertise</strong>
+                        with <strong>genuine care</strong>. We don't just fix machines; we restore comfort to your home.
+                    </p>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-sm-6">
+                            <div class="border rounded-3 p-3 h-100 hover-card">
+                                <div class="bg-light p-2 rounded-circle d-inline-block mb-2 text-dark"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <polyline points="16 11 18 13 22 9" />
+                                    </svg></div>
+                                <h6 class="fw-bold">Experienced Technicians</h6>
+                                <p class="text-muted small mb-0">Our team is fully certified and experienced.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="border rounded-3 p-3 h-100 hover-card">
+                                <div class="bg-light p-2 rounded-circle d-inline-block mb-2 text-dark"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5" />
+                                        <path d="M16 12h4" />
+                                        <path d="M16 16h4" />
+                                    </svg></div>
+                                <h6 class="fw-bold">Affordable Pricing</h6>
+                                <p class="text-muted small mb-0">We offer competitive rates without hidden fees.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="border rounded-3 p-3 h-100 hover-card">
+                                <div class="bg-light p-2 rounded-circle d-inline-block mb-2 text-dark"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                                    </svg></div>
+                                <h6 class="fw-bold">Eco-Friendly Solutions</h6>
+                                <p class="text-muted small mb-0">We use environmentally friendly products.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="border rounded-3 p-3 h-100 hover-card">
+                                <div class="bg-light p-2 rounded-circle d-inline-block mb-2 text-dark"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg></div>
+                                <h6 class="fw-bold">Quick Response Times</h6>
+                                <p class="text-muted small mb-0">Fast and efficient service for urgent needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-dark btn-lg d-flex align-items-center gap-2">Get a Free Quote Today <svg
+                            xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <span class="text-green fw-bold text-uppercase small ls-1">Transparent Pricing</span>
+                    <h2 class="display-5 fw-bold mt-2 mb-4">Affordable Rates, <br>Premium Service.</h2>
+                    <p class="text-secondary mb-5">We believe in honest pricing with no hidden costs. Choose a one-time
+                        service or save more with our quarterly contract packages.</p>
+
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-green flex-shrink-0 mt-1">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <div>
+                            <h6 class="fw-bold mb-0">90-Day Warranty</h6>
+                            <p class="small text-muted mb-0">Peace of mind guaranteed on workmanship.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start gap-3 mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-green flex-shrink-0 mt-1">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <div>
+                            <h6 class="fw-bold mb-0">No Transport Fees</h6>
+                            <p class="small text-muted mb-0">For services involving 3 units or more.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green text-white p-4 rounded-4 position-relative overflow-hidden shadow-custom">
+                        <div class="position-absolute top-0 end-0 bg-warning text-dark px-3 py-1 fw-bold"
+                            style="border-bottom-left-radius: 8px; font-size: 10px;">2025 SPECIAL</div>
+                        <h4 class="fw-bold mb-1">New Customer Promo</h4>
+                        <p class="text-light small mb-4 opacity-75">Service 4 units for a special introductory price.
+                        </p>
+                        <div class="d-flex align-items-baseline mb-4">
+                            <span class="display-4 fw-bold">$90</span>
+                            <span class="ms-2 opacity-75 small">/ net</span>
+                        </div>
+                        <p class="small opacity-75 mb-4" style="font-size: 10px;">*Valid for first-time customers only.
+                        </p>
+                        <button class="btn btn-light text-success fw-bold w-100">Claim Offer</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="bg-white rounded-4 shadow-custom overflow-hidden border">
+                        <div
+                            class="bg-green text-white p-3 row mx-0 text-center fw-bold small text-uppercase ls-1 align-items-center">
+                            <div class="col-4 text-start ps-4">Units</div>
+                            <div class="col-4">One-Time</div>
+                            <div class="col-4">Contract (4x)</div>
+                        </div>
+                        <!-- Table Body -->
+                        <div class="row mx-0 border-bottom py-4 align-items-center hover-card">
+                            <div class="col-4 fw-semibold text-secondary ps-4">1 FANCOIL</div>
+                            <div class="col-4 text-center fw-bold text-green fs-5">$65</div>
+                            <div class="col-4 text-center fw-bold text-dark fs-5">$240</div>
+                        </div>
+                        <div class="row mx-0 border-bottom py-4 align-items-center hover-card">
+                            <div class="col-4 fw-semibold text-secondary ps-4">2 FANCOIL</div>
+                            <div class="col-4 text-center fw-bold text-green fs-5">$75</div>
+                            <div class="col-4 text-center fw-bold text-dark fs-5">$260</div>
+                        </div>
+                        <div class="row mx-0 border-bottom py-4 align-items-center hover-card">
+                            <div class="col-4 fw-semibold text-secondary ps-4">3 FANCOIL</div>
+                            <div class="col-4 text-center fw-bold text-green fs-5">$85</div>
+                            <div class="col-4 text-center fw-bold text-dark fs-5">$280</div>
+                        </div>
+                        <div class="row mx-0 border-bottom py-4 align-items-center hover-card">
+                            <div class="col-4 fw-semibold text-secondary ps-4">4 FANCOIL</div>
+                            <div class="col-4 text-center fw-bold text-green fs-5">$95</div>
+                            <div class="col-4 text-center fw-bold text-dark fs-5">$340</div>
+                        </div>
+                        <div class="row mx-0 border-bottom py-4 align-items-center hover-card">
+                            <div class="col-4 fw-semibold text-secondary ps-4">5 FANCOIL</div>
+                            <div class="col-4 text-center fw-bold text-green fs-5">$110</div>
+                            <div class="col-4 text-center fw-bold text-dark fs-5">$400</div>
+                        </div>
+                        <div class="row mx-0 py-4 align-items-center hover-card">
+                            <div class="col-4 fw-semibold text-secondary ps-4">6 FANCOIL</div>
+                            <div class="col-4 text-center fw-bold text-green fs-5">$125</div>
+                            <div class="col-4 text-center fw-bold text-dark fs-5">$450</div>
+                        </div>
+                        <div class="bg-light p-3 text-center">
+                            <p class="text-muted mb-0" style="font-size: 10px;">Prices are subject to GST. Terms and
+                                conditions apply.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Workflow Section -->
+    <section class="workflow-section position-relative overflow-hidden"
+        style="background: linear-gradient(135deg, #0a1628 0%, #0f2218 50%, #0a1628 100%);">
+        <!-- Decorative Elements -->
+        <div class="position-absolute"
+            style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(22,163,74,0.08) 0%, transparent 70%); top: -200px; right: -200px;">
+        </div>
+        <div class="position-absolute"
+            style="width: 400px; height: 400px; background: radial-gradient(circle, rgba(74,222,128,0.06) 0%, transparent 70%); bottom: -100px; left: -100px;">
+        </div>
+
+        <div class="container py-5 position-relative" style="z-index: 2;">
+            <div class="py-5">
+                <!-- Section Header -->
+                <div class="text-center mb-5 pb-3">
+                    <span
+                        class="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill small fw-bold mb-4 text-uppercase"
+                        style="background: rgba(22,163,74,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); letter-spacing: 1.5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        Our Workflow
+                    </span>
+                    <h2 class="display-4 fw-bold text-white mb-3">The Green Star <span
+                            style="color: #4ade80;">Standard</span></h2>
+                    <p class="mx-auto mb-0" style="max-width: 600px; color: rgba(255,255,255,0.5);">A rigorous 10-step
+                        quality protocol designed to restore your air conditioning unit to factory-fresh performance.
+                        Every step verified.</p>
+                </div>
+
+                <!-- Steps Grid -->
+                <div class="row g-4">
+
+                    <!-- Step 01 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        01</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Clean Filters & Panel</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        The first steps of the servicing start from the outer parts. The unit cover will
+                                        be removed, and the air filter will be cleaned thoroughly to remove dust
+                                        accumulation.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        02</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Remove Water Tray</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        The water tray functions to gather water before it flows to the drainage pipe.
+                                        All the dust, jelly, dirt and other debris stuck inside will be cleaned and
+                                        vacuumed.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        03</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Clean Indoor Cooling Coil</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        The fan coil unit (FCU) will be vacuumed properly in an up-down motion and
+                                        repeatedly to ensure no dust spots are missed, ensuring optimal airflow.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        04</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Flush Drainage Tray</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        The vacuum will be left attached for around 1-2 minutes at the end of the
+                                        drainage pipe to clear any clogged dirt or jelly inside, preventing future
+                                        leaks.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 05 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        05</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Check Outdoor Coil</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        The technician will check if all the fan coils are working properly by visually
+                                        inspecting and checking for proper condensation on the outdoor unit.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 06 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        06</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Check Refrigerant Level</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">We
+                                        then double-check the outdoor condenser unit to make sure that there is still
+                                        enough gas. If necessary, compressor pressure will be assessed.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 07 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        07</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Clean Evaporator Coil</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        The evaporator coil will be checked, followed by vacuuming and brushing the
+                                        blower wheel to ensure nothing hinders smooth rotation.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 08 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        08</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Reattach Water Tray</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        After all cleaning steps are done, the water tray will be reattached. We ensure
+                                        it clips on properly and fully to prevent future leaks.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 09 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        09</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Tighten Components</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">We
+                                        double-check and tighten all electrical components and fan bearings to ensure
+                                        there are no loose parts or rattling noises.</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 10 -->
+                    <div class="col-lg-6">
+                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
+                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <div class="d-flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
+                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
+                                        10</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="fw-bold text-white mb-2">Final Wipe & Reassembly</h5>
+                                    <p class="mb-3"
+                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
+                                        Wipe down, clean any leftover water, and ensure the unit is dry. We reattach the
+                                        FCU Cover, and your unit is ready!</p>
+                                    <span
+                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
+                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                        QUALITY CHECK POINT
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Stats Bar -->
+                <div class="d-flex justify-content-center gap-5 mt-5 pt-5"
+                    style="border-top: 1px solid rgba(255,255,255,0.08);">
+                    <div class="text-center">
+                        <h4 class="fw-bold mb-0 text-white">10</h4>
+                        <span class="small" style="color: rgba(255,255,255,0.4);">Quality Checks</span>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="fw-bold mb-0" style="color: #4ade80;">100%</h4>
+                        <span class="small" style="color: rgba(255,255,255,0.4);">Verified Steps</span>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="fw-bold mb-0 text-white">90 min</h4>
+                        <span class="small" style="color: rgba(255,255,255,0.4);">Avg. Duration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                    <div class="text-warning d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg></div>
+                    <span class="fw-bold small">5.0 Star Rating on Google</span>
+                    <span class="text-primary fw-bold">G</span>
+                </div>
+                <h2 class="display-5 fw-bold mb-4">Trusted by <span class="text-green">7,000+</span> Happy Homes</h2>
+                <p class="text-secondary mx-auto mb-5" style="max-width: 600px;">We don't just fix aircons; we build
+                    long-term relationships through honesty, reliability, and superior workmanship.</p>
+
+                <div class="d-flex justify-content-center gap-5 border-bottom pb-4 mx-auto" style="max-width: 600px;">
+                    <div>
+                        <h3 class="fw-bold mb-0">15+</h3><span
+                            class="small text-muted fw-bold text-uppercase ls-1">Years Exp.</span>
+                    </div>
+                    <div class="border-end"></div>
+                    <div>
+                        <h3 class="fw-bold mb-0">165k</h3><span
+                            class="small text-muted fw-bold text-uppercase ls-1">Units Done</span>
+                    </div>
+                    <div class="border-end"></div>
+                    <div>
+                        <h3 class="fw-bold mb-0">100%</h3><span
+                            class="small text-muted fw-bold text-uppercase ls-1">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Review 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="bg-white p-4 rounded-4 border shadow-sm hover-card h-100">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center small fw-bold"
+                                    style="width:32px;height:32px;">J</div>
+                                <div>
+                                    <h6 class="fw-bold small mb-0">James Tan</h6><small class="text-muted"
+                                        style="font-size:10px;">Local Guide · 12 reviews</small>
+                                </div>
+                            </div>
+                            <span class="text-primary fw-bold">G</span>
+                        </div>
+                        <div class="text-warning d-flex small mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg> <span class="text-muted ms-2 fw-normal">1 week ago</span></div>
+                        <p class="small text-secondary mb-0">I've used Green Star Aircon for my office maintenance for
+                            over 3 years. Consistent quality and transparent pricing.</p>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="bg-white p-4 rounded-4 border shadow-sm hover-card h-100">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center small fw-bold"
+                                    style="width:32px;height:32px;">M</div>
+                                <div>
+                                    <h6 class="fw-bold small mb-0">Michelle Wu</h6><small class="text-muted"
+                                        style="font-size:10px;">Local Guide · 12 reviews</small>
+                                </div>
+                            </div>
+                            <span class="text-primary fw-bold">G</span>
+                        </div>
+                        <div class="text-warning d-flex small mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg> <span class="text-muted ms-2 fw-normal">3 weeks ago</span></div>
+                        <p class="small text-secondary mb-0">Super fast response via WhatsApp. The technician diagnosed
+                            the leaking issue within minutes and fixed it on the spot.</p>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="bg-white p-4 rounded-4 border shadow-sm hover-card h-100">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center small fw-bold"
+                                    style="width:32px;height:32px;">D</div>
+                                <div>
+                                    <h6 class="fw-bold small mb-0">David Chen</h6><small class="text-muted"
+                                        style="font-size:10px;">Local Guide · 12 reviews</small>
+                                </div>
+                            </div>
+                            <span class="text-primary fw-bold">G</span>
+                        </div>
+                        <div class="text-warning d-flex small mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg> <span class="text-muted ms-2 fw-normal">1 month ago</span></div>
+                        <p class="small text-secondary mb-0">Best aircon service I've had in Singapore. The booking
+                            process was seamless, and the technicians were polite.</p>
+                    </div>
+                </div>
+                <!-- Review 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="bg-white p-4 rounded-4 border shadow-sm hover-card h-100">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center small fw-bold"
+                                    style="width:32px;height:32px;">S</div>
+                                <div>
+                                    <h6 class="fw-bold small mb-0">Sarah Lim</h6><small class="text-muted"
+                                        style="font-size:10px;">Local Guide · 12 reviews</small>
+                                </div>
+                            </div>
+                            <span class="text-primary fw-bold">G</span>
+                        </div>
+                        <div class="text-warning d-flex small mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg> <span class="text-muted ms-2 fw-normal">2 days ago</span></div>
+                        <p class="small text-secondary mb-0">The team was incredibly professional. They arrived exactly
+                            on time, protected my furniture with plastic sheets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logos -->
+            <div
+                class="mt-5 text-center opacity-25 grayscale d-flex justify-content-center gap-4 flex-wrap align-items-center">
+                <span class="fs-4 fw-bold" style="font-family: serif;">Shopee</span>
+                <span class="fs-4 fw-bold sans-serif">Lazada</span>
+                <span class="fs-4 fw-bold font-monospace">Carousell</span>
+                <span class="fs-4 fw-bold">CNA</span>
+                <span class="fs-4 fw-bold" style="font-family: serif;">The Straits Times</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section — Dark Mode Carousel -->
+    <section id="gallery" class="gallery-section position-relative overflow-hidden">
+        <!-- Background Pattern Overlay -->
+        <div class="gallery-bg-pattern"></div>
+        <!-- Decorative Gradient Orbs -->
+        <div class="gallery-orb gallery-orb-1"></div>
+        <div class="gallery-orb gallery-orb-2"></div>
+
+        <div class="container py-5 position-relative" style="z-index: 2;">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <span
+                    class="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill small fw-bold mb-4 text-uppercase"
+                    style="background: rgba(22,163,74,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); letter-spacing: 1.5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="3" rx="2" />
+                        <path d="M3 9h18" />
+                        <path d="M9 21V9" />
+                    </svg>
+                    Our Work
+                </span>
+                <h2 class="display-5 fw-bold text-white mb-3">
+                    Project <span style="color: #4ade80;">Gallery</span>
+                </h2>
+                <p class="mx-auto mb-0" style="max-width: 550px; color: rgba(255,255,255,0.5);">
+                    Browse through our latest aircon installations, repairs, and maintenance projects across Singapore.
+                </p>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="gallery-carousel-wrapper position-relative">
+                <!-- Navigation Arrow — Previous -->
+                <button class="gallery-nav-btn gallery-nav-prev" id="galleryPrev" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
+                </button>
+
+                <!-- Slider Viewport -->
+                <div class="gallery-slider-viewport" id="galleryViewport">
+                    <div class="gallery-slider-track" id="galleryTrack">
+
+                        <!-- Slide 1 — New Installation -->
+                        <div class="gallery-slide">
+                            <a href="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=1000&auto=format&fit=crop"
+                                data-caption="New Installation — Residential & Commercial" class="gallery-slide-link">
+                                <div class="gallery-slide-card">
+                                    <div class="gallery-slide-img-wrap">
+                                        <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop"
+                                            alt="New Installation" loading="lazy">
+                                        <span class="gallery-slide-badge">Installation</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 2 — Chemical Wash -->
+                        <div class="gallery-slide">
+                            <a href="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=1000&auto=format&fit=crop"
+                                data-caption="Chemical Wash — Deep Cleaning Service" class="gallery-slide-link">
+                                <div class="gallery-slide-card">
+                                    <div class="gallery-slide-img-wrap">
+                                        <img src="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=600&auto=format&fit=crop"
+                                            alt="Chemical Wash" loading="lazy">
+                                        <span class="gallery-slide-badge">Chemical Wash</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 3 — Maintenance -->
+                        <div class="gallery-slide">
+                            <a href="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=1000&auto=format&fit=crop"
+                                data-caption="Maintenance — Routine Checkups" class="gallery-slide-link">
+                                <div class="gallery-slide-card">
+                                    <div class="gallery-slide-img-wrap">
+                                        <img src="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=600&auto=format&fit=crop"
+                                            alt="Maintenance" loading="lazy">
+                                        <span class="gallery-slide-badge">Servicing</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 4 — Chemical Overhaul -->
+                        <div class="gallery-slide">
+                            <a href="img/chemical-overhaul.png"
+                                data-caption="Chemical Overhaul — Full Component Cleaning" class="gallery-slide-link">
+                                <div class="gallery-slide-card">
+                                    <div class="gallery-slide-img-wrap">
+                                        <img src="img/chemical-overhaul.png" alt="Chemical Overhaul" loading="lazy">
+                                        <span class="gallery-slide-badge">Overhaul</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 5 — General Servicing -->
+                        <div class="gallery-slide">
+                            <a href="img/general-servicing.png" data-caption="General Servicing — Standard Maintenance"
+                                class="gallery-slide-link">
+                                <div class="gallery-slide-card">
+                                    <div class="gallery-slide-img-wrap">
+                                        <img src="img/general-servicing.png" alt="General Servicing" loading="lazy">
+                                        <span class="gallery-slide-badge">Servicing</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 6 — Ductwork Repair -->
+                        <div class="gallery-slide">
+                            <a href="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=1000&auto=format&fit=crop"
+                                data-caption="Ductwork Repair — Commercial Systems" class="gallery-slide-link">
+                                <div class="gallery-slide-card">
+                                    <div class="gallery-slide-img-wrap">
+                                        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=600&auto=format&fit=crop"
+                                            alt="Ductwork Repair" loading="lazy">
+                                        <span class="gallery-slide-badge">Repair</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Arrow — Next -->
+                <button class="gallery-nav-btn gallery-nav-next" id="galleryNext" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="gallery-dots d-flex justify-content-center align-items-center gap-2 mt-5" id="galleryDots">
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="gallery-stats d-flex justify-content-center gap-5 mt-5 pt-4"
+                style="border-top: 1px solid rgba(255,255,255,0.08);">
+                <div class="text-center">
+                    <h4 class="fw-bold mb-0 text-white">7,000+</h4>
+                    <span class="small" style="color: rgba(255,255,255,0.4);">Projects Completed</span>
+                </div>
+                <div class="text-center">
+                    <h4 class="fw-bold mb-0" style="color: #4ade80;">100%</h4>
+                    <span class="small" style="color: rgba(255,255,255,0.4);">Satisfaction Rate</span>
+                </div>
+                <div class="text-center">
+                    <h4 class="fw-bold mb-0 text-white">15+</h4>
+                    <span class="small" style="color: rgba(255,255,255,0.4);">Years Experience</span>
+                </div>
+            </div>
+
+            <!-- Climate Voucher Banner -->
+            <div class="mt-5 py-3 text-center rounded-3"
+                style="background: rgba(22,163,74,0.1); border: 1px solid rgba(74,222,128,0.15);">
+                <p class="mb-0 fw-bold small" style="color: #4ade80;">
+                    <span class="badge me-2" style="background: #16a34a;">GOVT</span>
+                    We accept Singapore Climate Vouchers! Save on your energy-efficient installation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-white overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div
+                        class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-green-light text-green fw-bold small text-uppercase mb-4 border border-success-subtle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg> Our Story
+                    </div>
+                    <h2 class="display-4 fw-bold mb-4">Cooling Singapore <br class="d-none d-md-block"> <span
+                            class="text-slate-900">Since 2017</span></h2>
+                    <div class="text-secondary">
+                        <p class="mb-4">Green Star Aircon started with a simple mission: to provide honest, reliable air
+                            conditioning services without the hard-selling tactics common in the industry.</p>
+                        <p>Over the years, we've grown into a trusted fleet serving thousands of homes annually. Despite
+                            our growth, our core values remain unchanged. We believe in transparent pricing, technical
+                            excellence, and treating every home with the same care we would our own.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 position-relative">
+                    <div class="rounded-4 overflow-hidden shadow-lg-custom position-relative" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=2070&auto=format&fit=crop"
+                            class="w-100 h-100 object-fit-cover">
+                        <div class="position-absolute bottom-0 start-0 m-4 mb-5 p-4 bg-white bg-opacity-10 backdrop-blur rounded-4 border border-white border-opacity-25 text-white"
+                            style="backdrop-filter: blur(10px);">
+                            <h3 class="fw-bold mb-0">8+ Years</h3>
+                            <p class="mb-0 text-light small">of Excellence & Trust</p>
+                        </div>
+                    </div>
+                    <!-- Blobs -->
+                    <div class="position-absolute top-0 end-0 translate-middle bg-success opacity-10 rounded-circle"
+                        style="width: 150px; height: 150px; filter: blur(50px); z-index: -1;"></div>
+                    <div class="position-absolute bottom-0 start-0 translate-middle bg-primary opacity-10 rounded-circle"
+                        style="width: 200px; height: 200px; filter: blur(50px); z-index: -1;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 mx-auto" style="max-width: 600px;">
+                <span class="text-green fw-bold text-uppercase small ls-1">Common Questions</span>
+                <h2 class="fw-bold mt-2">Frequently Asked Questions</h2>
+                <p class="text-secondary small">Everything you need to know about our services.</p>
+            </div>
+
+            <div class="accordion mx-auto" id="faqAccordion" style="max-width: 700px;">
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold text-dark" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+                            Why is regular aircon servicing important?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary small">
+                            Regular servicing ensures your unit operates efficiently, reducing energy bills and
+                            preventing costly major repairs. It also improves air quality by removing dust and mold.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq2">
+                            How often should I service my aircon?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary small">
+                            For residential units used daily, we recommend servicing every 3 months. For units used less
+                            frequently, every 6 months is sufficient.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Why is my aircon leaking water?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary small">
+                            Water leakage is often caused by a blocked drainage pipe due to dust and dirt accumulation.
+                            A general service or chemical wash can usually resolve this.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq4">
+                            What is the difference between Chemical Wash and Overhaul?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary small">
+                            A Chemical Wash cleans the coil and parts without dismantling the entire unit. An Overhaul
+                            involves fully dismantling the unit for a deep chemical soak of every component.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold text-dark" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faq5">
+                            Do you offer a warranty on servicing?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary small">
+                            Yes, we offer a 90-day warranty on workmanship for all our servicing jobs. If the same issue
+                            persists, we will fix it for free.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="card border-0 shadow-lg-custom rounded-4 overflow-hidden mx-auto" style="max-width: 1000px;">
+                <div class="row g-0">
+                    <!-- Form Side -->
+                    <div class="col-lg-7 p-4 p-md-5">
+                        <h3 class="fw-bold mb-2">Book an Appointment</h3>
+                        <p class="text-secondary small mb-4">Fill out the form below and we will get back to you within
+                            15 minutes.</p>
+
+                        <form>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">Name <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-3" placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">Phone <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-3" placeholder="+65 9449 9767">
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">Email <span
+                                            class="text-muted fw-normal">(Optional)</span></label>
+                                    <input type="email" class="form-control rounded-3" placeholder="john@example.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">Address <span
+                                            class="text-muted fw-normal">(Optional)</span></label>
+                                    <input type="text" class="form-control rounded-3" placeholder="Block, Street, Unit">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold text-secondary">Issue & Preferred Schedule <span
+                                        class="text-muted fw-normal">(Optional)</span></label>
+                                <textarea class="form-control rounded-3" rows="4"
+                                    placeholder="e.g. My aircon is leaking water. I am available on Saturday mornings."></textarea>
+                            </div>
+                            <button type="button"
+                                class="btn btn-green w-100 py-3 d-flex align-items-center justify-content-center gap-2">Confirm
+                                Booking <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m22 2-7 20-4-9-9-4Z" />
+                                    <path d="M22 2 11 13" />
+                                </svg></button>
+                        </form>
+                    </div>
+
+                    <!-- Info Side -->
+                    <div
+                        class="col-lg-5 bg-green-light p-4 p-md-5 border-start border-light d-flex flex-column justify-content-between">
+                        <div>
+                            <div
+                                class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white text-green rounded-pill small fw-bold mb-4 border border-success-subtle">
+                                <span class="bg-green rounded-circle d-inline-block"
+                                    style="width:6px;height:6px; animation: pulse 1.5s infinite;"></span> Available
+                                Today
+                            </div>
+                            <h4 class="fw-bold mb-4">Why homeowners trust our booking platform?</h4>
+
+                            <div class="d-flex gap-3 mb-4">
+                                <div class="bg-white p-2 rounded-circle shadow-sm text-green d-flex align-items-center justify-content-center"
+                                    style="width:40px;height:40px;"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg></div>
+                                <div>
+                                    <h6 class="fw-bold small mb-1">Instant Response</h6>
+                                    <p class="text-secondary small mb-0" style="font-size:11px;">Our system notifies our
+                                        team immediately. Expect a confirmation within 15 mins during business hours.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <div class="bg-white p-2 rounded-circle shadow-sm text-primary d-flex align-items-center justify-content-center"
+                                    style="width:40px;height:40px;"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                        <path d="m9 12 2 2 4-4" />
+                                    </svg></div>
+                                <div>
+                                    <h6 class="fw-bold small mb-1">Secure & Verified</h6>
+                                    <p class="text-secondary small mb-0" style="font-size:11px;">Your data is safe with
+                                        us. We only use your contact details to coordinate the appointment.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3 rounded-3 shadow-sm border mt-4">
+                            <span class="d-block text-green fw-bold text-uppercase small mb-1"
+                                style="font-size:10px;">Limited Time Offer</span>
+                            <p class="text-dark small fw-medium mb-0">"Refer a friend and get <span
+                                    class="text-green fw-bold">10% OFF</span> your next servicing!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-5">
+        <div class="container py-4">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-green fw-bold text-uppercase mb-3">Green Star</h5>
+                    <p class="text-secondary small">Your trusted partner for aircon servicing and repair in Singapore.
+                        Professional, reliable, and affordable.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2"><a href="#"
+                                class="text-decoration-none text-secondary hover-text-green">Home</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-decoration-none text-secondary hover-text-green">Services</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-decoration-none text-secondary hover-text-green">Pricing</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-text-green">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2">General Servicing</li>
+                        <li class="mb-2">Chemical Wash</li>
+                        <li class="mb-2">Chemical Overhaul</li>
+                        <li>Gas Top-Up</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact Us</h6>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2 d-flex align-items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                            contact@greenstar.sg</li>
+                        <li class="mb-2 d-flex align-items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg> +65 9123
+                            4567</li>
+                        <li class="d-flex align-items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg> 123
+                            Serangoon Rd, Singapore</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 mt-5 pt-4 text-center">
+                <small class="text-secondary">© 2026 Green Star Aircon Pte Ltd. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="position-fixed bottom-0 end-0 m-4 d-flex flex-column gap-3 z-3">
+        <div class="floating-btn bg-info text-white" title="Book Calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+            </svg>
+        </div>
+        <div class="floating-btn bg-success text-white animate-bounce-slow" title="WhatsApp Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Custom Lightbox -->
+    <div id="customLightbox" class="custom-lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="lightbox-next" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Fancybox removed — using custom lightbox -->
+    <script src="script.js"></script>
+</body>
+
+</html>
