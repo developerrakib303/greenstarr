@@ -111,17 +111,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Hamburger Animation Toggle
-const navbarToggler = document.querySelector('.navbar-toggler');
-if (navbarToggler) {
-    navbarToggler.addEventListener('click', function () {
-        this.classList.toggle('active');
-
-        // Update aria-expanded
-        const isExpanded = this.classList.contains('active');
-        this.setAttribute('aria-expanded', isExpanded);
-    });
-}
+// Hamburger Animation Toggle (Removed)
 
 // Active Link Highlighting (Scroll Spy)
 const sections = document.querySelectorAll('section[id]');
@@ -175,113 +165,20 @@ navLinks.forEach(link => {
                 });
             }
 
-            // Close mobile menu
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-                bsCollapse.hide();
-                if (navbarToggler) {
-                    navbarToggler.classList.remove('active');
-                    navbarToggler.setAttribute('aria-expanded', 'false');
-                }
-            }
+            // Close mobile menu (Removed)
         }
     });
 });
 
-// Mobile Menu Close Buttons
-const mobileCloseButtons = document.querySelectorAll('.mobile-menu-close');
-mobileCloseButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-            if (navbarToggler) {
-                navbarToggler.classList.remove('active');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-            }
-        }
-    });
-});
+// Mobile Menu Close Buttons (Removed)
 
-// Close mobile menu on outside click
-document.addEventListener('click', function (e) {
-    const navbar = document.querySelector('.navbar');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+// Close mobile menu on outside click (Removed)
 
-    if (navbar && navbarCollapse && navbarCollapse.classList.contains('show')) {
-        if (!navbar.contains(e.target)) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-            if (navbarToggler) {
-                navbarToggler.classList.remove('active');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-            }
-        }
-    }
-});
+// Enhanced touch support for mobile menu (Removed)
 
-// Close mobile menu on Escape key
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-            if (navbarToggler) {
-                navbarToggler.classList.remove('active');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-            }
-        }
-    }
-});
+// Close mobile menu on Escape key (Removed)
 
-// ===================================================
-// MOBILE MENU BACKDROP
-// ===================================================
-
-// Mobile Menu Backdrop Toggle
-function toggleBackdrop(show) {
-    const backdrop = document.querySelector('.navbar-backdrop');
-    if (!backdrop) return;
-
-    if (show) {
-        backdrop.classList.add('show');
-        document.body.classList.add('menu-open');
-    } else {
-        backdrop.classList.remove('show');
-        document.body.classList.remove('menu-open');
-    }
-}
-
-// Observe Bootstrap collapse events
-const navbarCollapse = document.querySelector('.navbar-collapse');
-if (navbarCollapse) {
-    navbarCollapse.addEventListener('show.bs.collapse', () => {
-        toggleBackdrop(true);
-    });
-
-    navbarCollapse.addEventListener('hide.bs.collapse', () => {
-        toggleBackdrop(false);
-    });
-}
-
-// Close menu when clicking backdrop
-document.addEventListener('click', function (e) {
-    const backdrop = document.querySelector('.navbar-backdrop');
-    if (backdrop && e.target === backdrop) {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-            if (navbarToggler) {
-                navbarToggler.classList.remove('active');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-            }
-        }
-    }
-});
+// Mobile Menu Backdrop logic (Removed)
 
 // ===================================================
 // HERO SLIDER LOGIC

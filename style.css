@@ -191,46 +191,7 @@ body {
     color: white;
 }
 
-/* Hamburger to X Animation */
-.navbar-toggler {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-}
-
-.navbar-toggler:hover {
-    background: var(--light-green-bg);
-}
-
-.hamburger-line {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: white;
-    /* Default to white */
-    margin: 6px auto;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-}
-
-.navbar-toggler.active .line-1 {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar-toggler.active .line-2 {
-    opacity: 0;
-}
-
-.navbar-toggler.active .line-3 {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Mobile Menu Close Button */
-.mobile-menu-close {
-    display: none;
-}
+/* Mobile Customizations (Removed) */
 
 /* Navigation Links */
 .nav-link {
@@ -261,231 +222,138 @@ body {
     background: var(--primary-green);
 }
 
-/* ===================================================
-   MOBILE NAVIGATION MENU - MODERN DESIGN
-   =================================================== */
+/* Mobile Navigation Menu Redesign */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
 
-/* Backdrop overlay */
-.navbar-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
+.hamburger-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-icon span {
+    display: block;
     width: 100%;
-    height: 100vh;
-    background: rgba(15, 23, 42, 0.5);
-    backdrop-filter: blur(4px);
+    height: 2px;
+    background-color: var(--dark-slate);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
     opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1040;
 }
 
-.navbar-backdrop.show {
-    opacity: 1;
-    visibility: visible;
+.navbar-toggler[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* Prevent body scroll when menu is open */
-body.menu-open {
-    overflow: hidden;
+.offcanvas {
+    border-left: none;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Modern hamburger button */
-.navbar-toggler {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: var(--light-green-bg);
-    transition: all 0.3s ease;
+.offcanvas-backdrop.show {
+    opacity: 0.3;
+    backdrop-filter: blur(2px);
 }
 
-.navbar-toggler:hover {
-    background: #dcfce7;
-    transform: scale(1.05);
+.offcanvas-body .nav-link {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: var(--dark-slate);
+    border-bottom: 1px solid #f1f5f9;
 }
 
-.navbar-toggler:active {
-    transform: scale(0.95);
+.offcanvas-body .nav-link:hover {
+    color: var(--primary-green) !important;
+    padding-left: 5px;
 }
 
-.navbar-toggler i {
-    transition: transform 0.3s ease;
-}
-
-.navbar-toggler[aria-expanded="true"] i {
-    transform: rotate(90deg);
-}
-
-/* Mobile Menu - Modern Design */
+/* Mobile Menu Media Queries */
 @media (max-width: 991px) {
+    .offcanvas {
+        width: 300px !important;
+    }
+}
+
+/* Very Small Screens - Professional Optimization */
+@media (max-width: 375px) {
     .navbar-collapse {
-        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 90%;
-        max-width: 350px;
-        height: 100vh;
-        padding: 0;
-        box-shadow: -8px 0 32px rgba(15, 23, 42, 0.12);
-        transform: translateX(100%);
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1050;
-        display: flex;
-        flex-direction: column;
-        border-left: 1px solid #e2e8f0;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .navbar-collapse.show {
-        transform: translateX(0);
-    }
-
-    /* Mobile Menu Header */
-    .mobile-menu-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.25rem 1.5rem;
-        border-bottom: 1px solid #e2e8f0;
-        background: #ffffff;
-        flex-shrink: 0;
-    }
-
-    .mobile-menu-close-btn {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-        border: none;
-        background: #f1f5f9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        color: var(--text-heading);
-    }
-
-    .mobile-menu-close-btn:hover {
-        background: #e2e8f0;
-        transform: rotate(90deg);
-    }
-
-    /* Navigation Links */
-    .navbar-nav {
-        padding: 1rem 1.5rem;
-        flex: 1;
-        overflow-y: auto;
+        width: 96%;
+        max-width: 340px;
     }
 
     .nav-link {
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 0.875rem 0.75rem !important;
-        margin: 0.25rem 0;
-        border-radius: 10px;
-        color: var(--text-heading) !important;
-        transition: all 0.2s ease;
-        position: relative;
-        border-bottom: none !important;
+        font-size: 0.95rem;
+        padding: 0.875rem 1.125rem !important;
+        min-height: 48px;
     }
 
-    .nav-link:hover {
-        background: var(--light-green-bg);
-        color: var(--primary-green) !important;
-        padding-left: 1rem !important;
-    }
-
-    .nav-link.active {
-        background: var(--light-green-bg);
-        color: var(--primary-green) !important;
-    }
-
-    .nav-link.active::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 4px;
-        height: 24px;
-        background: var(--primary-green);
-        border-radius: 0 4px 4px 0;
-    }
-
-    .nav-link.active::after {
-        display: none;
-    }
-
-    /* Book Now Button */
     .navbar-collapse .btn-green {
-        margin: 0 0 1.5rem 0;
-        padding: 0.875rem 1.5rem !important;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
-        transition: all 0.2s ease;
-        width: calc(100% - 3rem);
-        margin-left: 1.5rem;
-    }
-
-    .navbar-collapse .btn-green:active {
-        transform: scale(0.98);
-        box-shadow: 0 2px 8px rgba(22, 163, 74, 0.2);
-    }
-
-    /* Mobile Menu Footer */
-    .mobile-menu-footer {
-        padding: 1.5rem;
-        border-top: 1px solid #e2e8f0;
-        background: #f8fafc;
-        flex-shrink: 0;
-    }
-
-    .contact-info {
-        color: var(--text-gray);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        padding: 0.875rem 1.25rem !important;
+        min-height: 48px;
     }
 
     .contact-info .d-flex {
-        margin-bottom: 0.75rem;
-    }
-
-    .contact-info .d-flex:last-child {
-        margin-bottom: 0;
+        padding: 0.625rem;
+        min-height: 52px;
     }
 
     .contact-icon {
-        width: 36px;
-        height: 36px;
-        background: white;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary-green);
-        flex-shrink: 0;
-    }
-
-    /* Responsive logo */
-    .navbar-brand img {
-        height: 35px;
-    }
-
-    .navbar-brand .brand-text {
-        font-size: 1.1rem !important;
+        width: 38px;
+        height: 38px;
     }
 }
 
-/* Extra small screens */
-@media (max-width: 576px) {
-    .navbar-brand img {
-        height: 30px;
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+
+    .navbar-collapse,
+    .navbar-backdrop,
+    .nav-link,
+    .btn-green,
+    .mobile-menu-close-btn,
+    .navbar-toggler,
+    .contact-info .d-flex,
+    .contact-icon {
+        transition: none !important;
+        animation: none !important;
     }
 
-    .top-bar {
-        font-size: 0.7rem;
+    .navbar-collapse.show {
+        transform: translateX(0) !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .nav-link {
+        border: 2px solid transparent;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        border-color: var(--primary-green);
+    }
+
+    .mobile-menu-close-btn {
+        border: 2px solid #64748b;
+    }
+
+    .contact-info .d-flex {
+        border: 2px solid #e2e8f0;
     }
 }
 
@@ -2358,6 +2226,372 @@ section {
     }
 
     .workflow-card p {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* ===================================================
+   GALLERY CAROUSEL SECTION
+   =================================================== */
+
+#gallery-section {
+    padding: 30px 0;
+    background: #fff;
+    position: relative;
+}
+
+#gallery-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+
+#gallery-carousel .item {
+    padding: 10px;
+}
+
+#gallery-carousel .item a {
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid #eee;
+}
+
+#gallery-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+#gallery-carousel .item a:hover img {
+    transform: scale(1.05);
+}
+
+/* Caption overlay */
+.gallery-item-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(21 19 20);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid #16a34a;
+}
+
+#gallery-carousel .item a:hover .gallery-item-caption {
+    background: rgba(22, 163, 74, 0.9);
+}
+
+/* Fancybox styling override */
+.fancybox-caption {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+/* Owl Carousel Nav custom styling */
+#gallery-carousel .owl-nav {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+#gallery-carousel .owl-nav button.owl-prev,
+#gallery-carousel .owl-nav button.owl-next {
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    border-radius: 50%;
+    background: #fff !important;
+    border: 2px solid #16a34a !important;
+    color: #16a34a !important;
+    font-size: 24px !important;
+    padding: 0 !important;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery-carousel .owl-nav button.owl-prev span,
+#gallery-carousel .owl-nav button.owl-next span {
+    border: 0px;
+    margin: 0;
+    line-height: 1;
+    display: block;
+    padding-bottom: 4px;
+}
+
+#gallery-carousel .owl-nav button.owl-prev:hover,
+#gallery-carousel .owl-nav button.owl-next:hover {
+    background: #16a34a !important;
+    color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #gallery-section h2 {
+        font-size: 28px;
+    }
+
+    #gallery-carousel .owl-nav button.owl-prev,
+    #gallery-carousel .owl-nav button.owl-next {
+        width: 40px;
+        height: 40px;
+        font-size: 20px !important;
+        margin: 0 10px;
+    }
+
+    .gallery-item-caption {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* ===================================================
+   PROJECT GALLERY CAROUSEL SECTION
+   =================================================== */
+
+#project-gallery-carousel .item {
+    padding: 10px;
+}
+
+#project-gallery-carousel .item a {
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid #eee;
+}
+
+#project-gallery-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+#project-gallery-carousel .item a:hover img {
+    transform: scale(1.05);
+}
+
+/* Owl Carousel Nav custom styling for project gallery */
+#project-gallery-carousel .owl-nav {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+#project-gallery-carousel .owl-nav button.owl-prev,
+#project-gallery-carousel .owl-nav button.owl-next {
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    border-radius: 50%;
+    background: #fff !important;
+    border: 2px solid #16a34a !important;
+    color: #16a34a !important;
+    font-size: 24px !important;
+    padding: 0 !important;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#project-gallery-carousel .owl-nav button.owl-prev span,
+#project-gallery-carousel .owl-nav button.owl-next span {
+    border: 0px;
+    margin: 0;
+    line-height: 1;
+    display: block;
+    padding-bottom: 4px;
+}
+
+#project-gallery-carousel .owl-nav button.owl-prev:hover,
+#project-gallery-carousel .owl-nav button.owl-next:hover {
+    background: #16a34a !important;
+    color: white !important;
+}
+
+/* Responsive adjustments for project gallery */
+@media (max-width: 768px) {
+
+    #project-gallery-carousel .owl-nav button.owl-prev,
+    #project-gallery-carousel .owl-nav button.owl-next {
+        width: 40px;
+        height: 40px;
+        font-size: 20px !important;
+        margin: 0 10px;
+    }
+}
+
+/* ===================================================
+   WORKFLOW SERVICE CARD ENHANCEMENTS
+   =================================================== */
+
+/* Workflow service card base styling */
+.workflow-service-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+}
+
+.workflow-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Image hover effect */
+.workflow-service-card img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.workflow-service-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Text content improvements */
+.workflow-service-card h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.workflow-service-card p {
+    line-height: 1.6;
+}
+
+/* Step number badge animation */
+.workflow-service-card .d-flex.align-items-center.justify-content-center {
+    transition: all 0.3s ease;
+}
+
+.workflow-service-card:hover .d-flex.align-items-center.justify-content-center {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3) !important;
+}
+
+/* Background Step Number */
+.step-bg-number {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(22, 163, 74, 0.08);
+    /* Very subtle green */
+    line-height: 1;
+    z-index: 1;
+    pointer-events: none;
+    font-family: var(--font-primary, sans-serif);
+}
+
+/* Mobile responsiveness - Force Side-by-Side to match screenshot */
+@media (max-width: 768px) {
+    .workflow-service-card .row {
+        flex-direction: row !important;
+        /* Default: Image Left, Content Right */
+    }
+
+    /* Alternating layout for even items: Content Left, Image Right */
+    .col-lg-6:nth-child(even) .workflow-service-card .row {
+        flex-direction: row-reverse !important;
+    }
+
+    .workflow-service-card .col-md-5 {
+        width: 40% !important;
+        flex: 0 0 40% !important;
+        max-width: 40% !important;
+    }
+
+    .workflow-service-card .col-md-7 {
+        width: 60% !important;
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
+        position: relative;
+        z-index: 2;
+        /* Ensure text is above bg number */
+    }
+
+    .workflow-service-card img {
+        min-height: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .workflow-service-card .p-4 {
+        padding: 1rem !important;
+        /* Reduce padding on mobile */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .workflow-service-card h5 {
+        font-size: 0.95rem;
+        margin-bottom: 4px !important;
+        padding-right: 10px;
+    }
+
+    .workflow-service-card p {
+        font-size: 0.75rem !important;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .step-bg-number {
+        font-size: 4rem;
+        /* Adjusted for mobile card size */
+        top: -5px;
+        right: 10px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 991px) {
+    .workflow-service-card img {
+        min-height: 200px !important;
+    }
+
+    .workflow-service-card h5 {
+        font-size: 1rem;
+    }
+
+    .workflow-service-card p {
         font-size: 0.8rem !important;
     }
 }

@@ -20,7 +20,13 @@
     <!-- Lottie Player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
     <!-- Custom CSS -->
     <!-- Fancybox removed — using custom lightbox -->
@@ -84,47 +90,17 @@
             </a>
 
             <!-- Mobile Burger (Visible on Mobile) -->
-            <button class="navbar-toggler border-0 p-0 ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-label="Toggle navigation" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-dark-slate">
-                    <line x1="4" x2="20" y1="12" y2="12" />
-                    <line x1="4" x2="20" y1="6" y2="6" />
-                    <line x1="4" x2="20" y1="18" y2="18" />
-                </svg>
+            <button class="navbar-toggler border-0 p-0 shadow-none d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
 
             <!-- Navigation Menu (Desktop: Center/Right) -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Mobile Menu Header -->
-                <div class="mobile-menu-header d-lg-none">
-                    <div class="d-flex align-items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="text-green">
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <line x1="12" y1="2" x2="12" y2="22"></line>
-                            <path d="M20 16l-4-4 4-4"></path>
-                            <path d="M4 8l4 4-4 4"></path>
-                            <path d="M16 4l-4 4-4-4"></path>
-                            <path d="M8 20l4-4 4 4"></path>
-                        </svg>
-                        <div>
-                            <span class="fw-bold text-dark-slate">GREEN STAR</span>
-                            <div class="text-secondary" style="font-size: 9px; letter-spacing: 1px;">AIRCON PTE LTD
-                            </div>
-                        </div>
-                    </div>
-                    <button class="mobile-menu-close-btn" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-label="Close menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 6 6 18" />
-                            <path d="m6 6 12 12" />
-                        </svg>
-                    </button>
-                </div>
 
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mb-3 mb-lg-0 fw-semibold text-uppercase"
                     style="font-size: 0.85rem; letter-spacing: 0.5px;">
@@ -148,53 +124,50 @@
                         </svg>
                     </a>
                 </div>
-
-                <!-- Mobile Menu Book Button -->
-                <div class="d-lg-none mt-3">
-                    <a href="#booking"
-                        class="btn btn-green w-100 rounded-3 py-2 d-flex align-items-center justify-content-center gap-2">
-                        Book Now
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path
-                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Footer -->
-                <div class="mobile-menu-footer d-lg-none">
-                    <div class="contact-info">
-                        <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                </svg>
-                            </div>
-                            <span class="fw-medium">+65 XXXX XXXX</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                                </svg>
-                            </div>
-                            <span class="fw-medium">info@greenstar.com.sg</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu Backdrop -->
-    <div class="navbar-backdrop"></div>
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-dark-slate" id="mobileMenuLabel">MENU</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+            <ul class="navbar-nav flex-column gap-3 fw-semibold text-uppercase"
+                style="font-size: 1rem; letter-spacing: 0.5px;">
+                <li class="nav-item"><a class="nav-link text-dark-slate" href="#services"
+                        data-bs-dismiss="offcanvas">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-slate" href="#pricing"
+                        data-bs-dismiss="offcanvas">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-slate" href="#process"
+                        data-bs-dismiss="offcanvas">Process</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-slate" href="#gallery"
+                        data-bs-dismiss="offcanvas">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-slate" href="#about"
+                        data-bs-dismiss="offcanvas">About</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-slate" href="#reviews"
+                        data-bs-dismiss="offcanvas">Reviews</a></li>
+            </ul>
+
+            <div class="mt-4">
+                <a href="#booking" data-bs-dismiss="offcanvas"
+                    class="btn btn-green w-100 rounded-pill py-3 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm">
+                    Book Now
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path
+                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                    </svg>
+                </a>
+                <div class="text-center mt-3 text-secondary small">
+                    <p class="mb-0">Running daily 8am - 8pm</p>
+                    <p class="mb-0">Same-day servicing available</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-slider-section position-relative overflow-hidden text-white">
@@ -1048,23 +1021,15 @@
 
 
     <!-- Workflow Section -->
-    <section class="workflow-section position-relative overflow-hidden"
-        style="background: linear-gradient(135deg, #0a1628 0%, #0f2218 50%, #0a1628 100%);">
-        <!-- Decorative Elements -->
-        <div class="position-absolute"
-            style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(22,163,74,0.08) 0%, transparent 70%); top: -200px; right: -200px;">
-        </div>
-        <div class="position-absolute"
-            style="width: 400px; height: 400px; background: radial-gradient(circle, rgba(74,222,128,0.06) 0%, transparent 70%); bottom: -100px; left: -100px;">
-        </div>
+    <section class="workflow-section position-relative overflow-hidden" style="background: #f8f9fa; padding: 80px 0;">
 
-        <div class="container py-5 position-relative" style="z-index: 2;">
-            <div class="py-5">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="py-4">
                 <!-- Section Header -->
                 <div class="text-center mb-5 pb-3">
                     <span
                         class="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill small fw-bold mb-4 text-uppercase"
-                        style="background: rgba(22,163,74,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); letter-spacing: 1.5px;">
+                        style="background: rgba(22,163,74,0.1); color: #16a34a; border: 1px solid rgba(22,163,74,0.2); letter-spacing: 1.5px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
@@ -1072,9 +1037,9 @@
                         </svg>
                         Our Workflow
                     </span>
-                    <h2 class="display-4 fw-bold text-white mb-3">The Green Star <span
-                            style="color: #4ade80;">Standard</span></h2>
-                    <p class="mx-auto mb-0" style="max-width: 600px; color: rgba(255,255,255,0.5);">A rigorous 10-step
+                    <h2 class="display-4 fw-bold mb-3" style="color: #1f2937;">The Green Star <span
+                            style="color: #16a34a;">Standard</span></h2>
+                    <p class="mx-auto mb-0" style="max-width: 600px; color: #6b7280;">A rigorous 10-step
                         quality protocol designed to restore your air conditioning unit to factory-fresh performance.
                         Every step verified.</p>
                 </div>
@@ -1084,32 +1049,22 @@
 
                     <!-- Step 01 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        01</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">01</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=600&auto=format&fit=crop"
+                                        alt="Clean Filters & Panel" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Clean Filters & Panel</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        The first steps of the servicing start from the outer parts. The unit cover will
-                                        be removed, and the air filter will be cleaned thoroughly to remove dust
-                                        accumulation.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Clean Filters & Panel</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            The first steps of the servicing start from the outer parts. The unit cover
+                                            will be removed, and the air filter will be cleaned thoroughly.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1117,32 +1072,23 @@
 
                     <!-- Step 02 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        02</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">02</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=600&auto=format&fit=crop"
+                                        alt="Remove Water Tray" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Remove Water Tray</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        The water tray functions to gather water before it flows to the drainage pipe.
-                                        All the dust, jelly, dirt and other debris stuck inside will be cleaned and
-                                        vacuumed.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Remove Water Tray</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            The water tray functions to gather water before it flows to the drainage
+                                            pipe.
+                                            All debris stuck inside will be cleaned and vacuumed.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1150,31 +1096,23 @@
 
                     <!-- Step 03 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        03</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">03</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop"
+                                        alt="Clean Indoor Cooling Coil" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Clean Indoor Cooling Coil</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        The fan coil unit (FCU) will be vacuumed properly in an up-down motion and
-                                        repeatedly to ensure no dust spots are missed, ensuring optimal airflow.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Clean Indoor Coil</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            The fan coil unit (FCU) will be vacuumed properly to ensure no dust spots
+                                            are
+                                            missed, ensuring optimal airflow.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1182,32 +1120,22 @@
 
                     <!-- Step 04 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        04</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">04</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=600&auto=format&fit=crop"
+                                        alt="Flush Drainage Tray" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Flush Drainage Tray</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        The vacuum will be left attached for around 1-2 minutes at the end of the
-                                        drainage pipe to clear any clogged dirt or jelly inside, preventing future
-                                        leaks.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Flush Drainage Tray</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            The vacuum will be left attached to clear any clogged dirt or jelly inside,
+                                            preventing future leaks.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1215,31 +1143,21 @@
 
                     <!-- Step 05 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        05</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">05</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="img/chemical-overhaul.png" alt="Check Outdoor Coil" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Check Outdoor Coil</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        The technician will check if all the fan coils are working properly by visually
-                                        inspecting and checking for proper condensation on the outdoor unit.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Check Outdoor Coil</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            The technician will check if all the fan coils are working properly by
+                                            inspecting for proper condensation.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1247,31 +1165,22 @@
 
                     <!-- Step 06 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        06</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">06</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="img/general-servicing.png" alt="Check Refrigerant Level"
+                                        class="w-100 h-100" style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Check Refrigerant Level</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">We
-                                        then double-check the outdoor condenser unit to make sure that there is still
-                                        enough gas. If necessary, compressor pressure will be assessed.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Check Refrigerant</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">We
+                                            double-check the outdoor condenser unit to make sure there is still enough
+                                            gas.
+                                            Compressor pressure will be assessed if necessary.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1279,31 +1188,22 @@
 
                     <!-- Step 07 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        07</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">07</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=600&auto=format&fit=crop"
+                                        alt="Clean Evaporator Coil" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Clean Evaporator Coil</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        The evaporator coil will be checked, followed by vacuuming and brushing the
-                                        blower wheel to ensure nothing hinders smooth rotation.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Clean Evaporator Coil</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            The evaporator coil will be checked, followed by vacuuming and brushing the
+                                            blower wheel for smooth rotation.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1311,31 +1211,23 @@
 
                     <!-- Step 08 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        08</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">08</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop"
+                                        alt="Reattach Water Tray" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Reattach Water Tray</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        After all cleaning steps are done, the water tray will be reattached. We ensure
-                                        it clips on properly and fully to prevent future leaks.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Reattach Water Tray</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            After all cleaning steps are done, the water tray will be reattached. We
+                                            ensure
+                                            it clips on properly to prevent leaks.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1343,31 +1235,23 @@
 
                     <!-- Step 09 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        09</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">09</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=600&auto=format&fit=crop"
+                                        alt="Tighten Components" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Tighten Components</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">We
-                                        double-check and tighten all electrical components and fan bearings to ensure
-                                        there are no loose parts or rattling noises.</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Tighten Components</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">We
+                                            double-check and tighten all electrical components and fan bearings to
+                                            ensure
+                                            no loose parts or rattling noises.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1375,31 +1259,23 @@
 
                     <!-- Step 10 -->
                     <div class="col-lg-6">
-                        <div class="workflow-card h-100 rounded-4 p-4 position-relative"
-                            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="d-flex gap-4">
-                                <div class="flex-shrink-0">
-                                    <div class="d-flex align-items-center justify-content-center rounded-3 fw-bold"
-                                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #16a34a, #22c55e); color: white; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(22,163,74,0.3);">
-                                        10</div>
+                        <div class="workflow-service-card h-100 rounded-4 overflow-hidden position-relative"
+                            style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease;">
+                            <div class="step-bg-number">10</div>
+                            <div class="row g-0 h-100 position-relative" style="z-index: 2;">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=600&auto=format&fit=crop"
+                                        alt="Final Wipe & Reassembly" class="w-100 h-100"
+                                        style="object-fit: cover; min-height: 220px;">
                                 </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="fw-bold text-white mb-2">Final Wipe & Reassembly</h5>
-                                    <p class="mb-3"
-                                        style="color: rgba(255,255,255,0.45); font-size: 0.875rem; line-height: 1.6;">
-                                        Wipe down, clean any leftover water, and ensure the unit is dry. We reattach the
-                                        FCU Cover, and your unit is ready!</p>
-                                    <span
-                                        class="d-inline-flex align-items-center gap-1 px-3 py-1 rounded-pill small fw-bold"
-                                        style="background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); font-size: 0.7rem; letter-spacing: 0.5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                        QUALITY CHECK POINT
-                                    </span>
+                                <div class="col-md-7">
+                                    <div class="p-4 h-100 d-flex flex-column justify-content-center">
+                                        <h5 class="fw-bold mb-3" style="color: #111827;">Final Wipe & Reassembly</h5>
+                                        <p class="mb-0" style="color: #4b5563; font-size: 0.9rem; line-height: 1.6;">
+                                            Wipe down, clean any leftover water, and ensure the unit is dry. We reattach
+                                            the
+                                            FCU Cover, and your unit is ready!</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1409,18 +1285,18 @@
 
                 <!-- Bottom Stats Bar -->
                 <div class="d-flex justify-content-center gap-5 mt-5 pt-5"
-                    style="border-top: 1px solid rgba(255,255,255,0.08);">
+                    style="border-top: 1px solid rgba(0,0,0,0.08);">
                     <div class="text-center">
-                        <h4 class="fw-bold mb-0 text-white">10</h4>
-                        <span class="small" style="color: rgba(255,255,255,0.4);">Quality Checks</span>
+                        <h4 class="fw-bold mb-0" style="color: #111827;">10</h4>
+                        <span class="small" style="color: #6b7280;">Quality Checks</span>
                     </div>
                     <div class="text-center">
-                        <h4 class="fw-bold mb-0" style="color: #4ade80;">100%</h4>
-                        <span class="small" style="color: rgba(255,255,255,0.4);">Verified Steps</span>
+                        <h4 class="fw-bold mb-0" style="color: #16a34a;">100%</h4>
+                        <span class="small" style="color: #6b7280;">Verified Steps</span>
                     </div>
                     <div class="text-center">
-                        <h4 class="fw-bold mb-0 text-white">90 min</h4>
-                        <span class="small" style="color: rgba(255,255,255,0.4);">Avg. Duration</span>
+                        <h4 class="fw-bold mb-0" style="color: #111827;">90 min</h4>
+                        <span class="small" style="color: #6b7280;">Avg. Duration</span>
                     </div>
                 </div>
             </div>
@@ -1674,176 +1550,89 @@
         </div>
     </section>
 
-    <!-- Gallery Section — Dark Mode Carousel -->
-    <section id="gallery" class="gallery-section position-relative overflow-hidden">
-        <!-- Background Pattern Overlay -->
-        <div class="gallery-bg-pattern"></div>
-        <!-- Decorative Gradient Orbs -->
-        <div class="gallery-orb gallery-orb-1"></div>
-        <div class="gallery-orb gallery-orb-2"></div>
-
-        <div class="container py-5 position-relative" style="z-index: 2;">
-            <!-- Section Header -->
+    <!-- Project Gallery Section -->
+    <section id="gallery" class="py-5 bg-white">
+        <div class="container py-5">
             <div class="text-center mb-5">
-                <span
-                    class="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill small fw-bold mb-4 text-uppercase"
-                    style="background: rgba(22,163,74,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); letter-spacing: 1.5px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="18" height="18" x="3" y="3" rx="2" />
-                        <path d="M3 9h18" />
-                        <path d="M9 21V9" />
-                    </svg>
-                    Our Work
-                </span>
-                <h2 class="display-5 fw-bold text-white mb-3">
-                    Project <span style="color: #4ade80;">Gallery</span>
-                </h2>
-                <p class="mx-auto mb-0" style="max-width: 550px; color: rgba(255,255,255,0.5);">
-                    Browse through our latest aircon installations, repairs, and maintenance projects across Singapore.
-                </p>
+                <span class="text-green fw-bold text-uppercase small ls-1">Our Work</span>
+                <h2 class="display-5 fw-bold mt-2 mb-3">Project <span class="text-green">Gallery</span></h2>
+                <p class="text-secondary mx-auto" style="max-width: 600px;">Browse through our latest aircon
+                    installations, repairs, and maintenance projects across Singapore.</p>
             </div>
 
-            <!-- Carousel Wrapper -->
-            <div class="gallery-carousel-wrapper position-relative">
-                <!-- Navigation Arrow — Previous -->
-                <button class="gallery-nav-btn gallery-nav-prev" id="galleryPrev" aria-label="Previous slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m15 18-6-6 6-6" />
-                    </svg>
-                </button>
-
-                <!-- Slider Viewport -->
-                <div class="gallery-slider-viewport" id="galleryViewport">
-                    <div class="gallery-slider-track" id="galleryTrack">
-
-                        <!-- Slide 1 — New Installation -->
-                        <div class="gallery-slide">
-                            <a href="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=1000&auto=format&fit=crop"
-                                data-caption="New Installation — Residential & Commercial" class="gallery-slide-link">
-                                <div class="gallery-slide-card">
-                                    <div class="gallery-slide-img-wrap">
-                                        <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop"
-                                            alt="New Installation" loading="lazy">
-                                        <span class="gallery-slide-badge">Installation</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slide 2 — Chemical Wash -->
-                        <div class="gallery-slide">
-                            <a href="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=1000&auto=format&fit=crop"
-                                data-caption="Chemical Wash — Deep Cleaning Service" class="gallery-slide-link">
-                                <div class="gallery-slide-card">
-                                    <div class="gallery-slide-img-wrap">
-                                        <img src="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=600&auto=format&fit=crop"
-                                            alt="Chemical Wash" loading="lazy">
-                                        <span class="gallery-slide-badge">Chemical Wash</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slide 3 — Maintenance -->
-                        <div class="gallery-slide">
-                            <a href="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=1000&auto=format&fit=crop"
-                                data-caption="Maintenance — Routine Checkups" class="gallery-slide-link">
-                                <div class="gallery-slide-card">
-                                    <div class="gallery-slide-img-wrap">
-                                        <img src="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=600&auto=format&fit=crop"
-                                            alt="Maintenance" loading="lazy">
-                                        <span class="gallery-slide-badge">Servicing</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slide 4 — Chemical Overhaul -->
-                        <div class="gallery-slide">
-                            <a href="img/chemical-overhaul.png"
-                                data-caption="Chemical Overhaul — Full Component Cleaning" class="gallery-slide-link">
-                                <div class="gallery-slide-card">
-                                    <div class="gallery-slide-img-wrap">
-                                        <img src="img/chemical-overhaul.png" alt="Chemical Overhaul" loading="lazy">
-                                        <span class="gallery-slide-badge">Overhaul</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slide 5 — General Servicing -->
-                        <div class="gallery-slide">
-                            <a href="img/general-servicing.png" data-caption="General Servicing — Standard Maintenance"
-                                class="gallery-slide-link">
-                                <div class="gallery-slide-card">
-                                    <div class="gallery-slide-img-wrap">
-                                        <img src="img/general-servicing.png" alt="General Servicing" loading="lazy">
-                                        <span class="gallery-slide-badge">Servicing</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slide 6 — Ductwork Repair -->
-                        <div class="gallery-slide">
-                            <a href="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=1000&auto=format&fit=crop"
-                                data-caption="Ductwork Repair — Commercial Systems" class="gallery-slide-link">
-                                <div class="gallery-slide-card">
-                                    <div class="gallery-slide-img-wrap">
-                                        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=600&auto=format&fit=crop"
-                                            alt="Ductwork Repair" loading="lazy">
-                                        <span class="gallery-slide-badge">Repair</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
+            <div id="project-gallery-carousel" class="owl-carousel owl-theme">
+                <!-- Item 1 -->
+                <div class="item">
+                    <a href="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=1000&auto=format&fit=crop"
+                        data-fancybox="project-gallery">
+                        <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop"
+                            class="img-fluid" alt="New Installation">
+                        <div class="gallery-item-caption">Installation</div>
+                    </a>
                 </div>
-
-                <!-- Navigation Arrow — Next -->
-                <button class="gallery-nav-btn gallery-nav-next" id="galleryNext" aria-label="Next slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m9 18 6-6-6-6" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Pagination Dots -->
-            <div class="gallery-dots d-flex justify-content-center align-items-center gap-2 mt-5" id="galleryDots">
+                <!-- Item 2 -->
+                <div class="item">
+                    <a href="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=1000&auto=format&fit=crop"
+                        data-fancybox="project-gallery">
+                        <img src="https://images.unsplash.com/photo-1621905252472-943af020766c?q=80&w=600&auto=format&fit=crop"
+                            class="img-fluid" alt="Chemical Wash">
+                        <div class="gallery-item-caption">Chemical Wash</div>
+                    </a>
+                </div>
+                <!-- Item 3 -->
+                <div class="item">
+                    <a href="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=1000&auto=format&fit=crop"
+                        data-fancybox="project-gallery">
+                        <img src="https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=600&auto=format&fit=crop"
+                            class="img-fluid" alt="Maintenance">
+                        <div class="gallery-item-caption">Servicing</div>
+                    </a>
+                </div>
+                <!-- Item 4 -->
+                <div class="item">
+                    <a href="img/chemical-overhaul.png" data-fancybox="project-gallery">
+                        <img src="img/chemical-overhaul.png" class="img-fluid" alt="Chemical Overhaul">
+                        <div class="gallery-item-caption">Overhaul</div>
+                    </a>
+                </div>
+                <!-- Item 5 -->
+                <div class="item">
+                    <a href="img/general-servicing.png" data-fancybox="project-gallery">
+                        <img src="img/general-servicing.png" class="img-fluid" alt="General Servicing">
+                        <div class="gallery-item-caption">Servicing</div>
+                    </a>
+                </div>
+                <!-- Item 6 -->
+                <div class="item">
+                    <a href="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=1000&auto=format&fit=crop"
+                        data-fancybox="project-gallery">
+                        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=600&auto=format&fit=crop"
+                            class="img-fluid" alt="Ductwork Repair">
+                        <div class="gallery-item-caption">Repair</div>
+                    </a>
+                </div>
             </div>
 
             <!-- Stats Bar -->
-            <div class="gallery-stats d-flex justify-content-center gap-5 mt-5 pt-4"
-                style="border-top: 1px solid rgba(255,255,255,0.08);">
+            <div class="d-flex justify-content-center gap-5 mt-5 pt-4" style="border-top: 1px solid rgba(0,0,0,0.08);">
                 <div class="text-center">
-                    <h4 class="fw-bold mb-0 text-white">7,000+</h4>
-                    <span class="small" style="color: rgba(255,255,255,0.4);">Projects Completed</span>
+                    <h4 class="fw-bold mb-0">7,000+</h4>
+                    <span class="small text-secondary">Projects Completed</span>
                 </div>
                 <div class="text-center">
-                    <h4 class="fw-bold mb-0" style="color: #4ade80;">100%</h4>
-                    <span class="small" style="color: rgba(255,255,255,0.4);">Satisfaction Rate</span>
+                    <h4 class="fw-bold mb-0 text-green">100%</h4>
+                    <span class="small text-secondary">Satisfaction Rate</span>
                 </div>
                 <div class="text-center">
-                    <h4 class="fw-bold mb-0 text-white">15+</h4>
-                    <span class="small" style="color: rgba(255,255,255,0.4);">Years Experience</span>
+                    <h4 class="fw-bold mb-0">15+</h4>
+                    <span class="small text-secondary">Years Experience</span>
                 </div>
             </div>
 
             <!-- Climate Voucher Banner -->
-            <div class="mt-5 py-3 text-center rounded-3"
-                style="background: rgba(22,163,74,0.1); border: 1px solid rgba(74,222,128,0.15);">
-                <p class="mb-0 fw-bold small" style="color: #4ade80;">
-                    <span class="badge me-2" style="background: #16a34a;">GOVT</span>
+            <div class="mt-5 py-3 text-center rounded-3 bg-light-green border border-success-subtle">
+                <p class="mb-0 fw-bold small text-green">
+                    <span class="badge me-2 bg-green text-white">GOVT</span>
                     We accept Singapore Climate Vouchers! Save on your energy-efficient installation.
                 </p>
             </div>
@@ -2190,6 +1979,116 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery (required for Owl Carousel and Fancybox) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- Gallery Carousel Initialization -->
+    <script>
+        jQuery(document).ready(function ($) {
+            // Define the carousel elements
+            var $galleryCarousel = $('#gallery-carousel');
+            var $projectGalleryCarousel = $('#project-gallery-carousel');
+
+            // Initialize Gallery Carousel (bottom gallery)
+            $galleryCarousel.owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+
+            // Initialize Project Gallery Carousel (top gallery)
+            $projectGalleryCarousel.owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+
+            // Initialize Fancybox for bottom gallery
+            $('[data-fancybox="gallery"]').fancybox({
+                buttons: [
+                    "zoom",
+                    "slideShow",
+                    "fullScreen",
+                    "thumbs",
+                    "close"
+                ],
+                loop: true,
+                infobar: true,
+                protect: true,
+                thumbs: {
+                    autoStart: true,
+                    axis: 'y'
+                },
+                caption: function (item) {
+                    return $(item.opts.$orig).find('.gallery-item-caption').text();
+                },
+                afterClose: function (instance, current) {
+                    setTimeout(function () {
+                        $galleryCarousel.trigger('refresh.owl.carousel');
+                        $(window).trigger('resize');
+                    }, 100);
+                }
+            });
+
+            // Initialize Fancybox for project gallery
+            $('[data-fancybox="project-gallery"]').fancybox({
+                buttons: [
+                    "zoom",
+                    "slideShow",
+                    "fullScreen",
+                    "thumbs",
+                    "close"
+                ],
+                loop: true,
+                infobar: true,
+                protect: true,
+                thumbs: {
+                    autoStart: true,
+                    axis: 'y'
+                },
+                caption: function (item) {
+                    return $(item.opts.$orig).find('.gallery-item-caption').text();
+                },
+                afterClose: function (instance, current) {
+                    setTimeout(function () {
+                        $projectGalleryCarousel.trigger('refresh.owl.carousel');
+                        $(window).trigger('resize');
+                    }, 100);
+                }
+            });
+        });
+    </script>
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
