@@ -880,48 +880,46 @@ body {
 }
 
 /* ============================================
-   GOOGLE RATING BADGE STYLING
+   GOOGLE OFFICIAL BADGE STYLING
    ============================================ */
 
-.google-rating-badge {
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
+.google-official-badge {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    user-select: none;
 }
 
-.google-rating-badge:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.google-official-badge:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
     transform: translateY(-2px);
+    border-color: #cbd5e1 !important;
+    /* slate-300 */
 }
 
-.google-rating-badge .d-flex.gap-1 svg {
-    flex-shrink: 0;
-}
-
-.google-rating-badge span {
+.google-official-badge span {
     white-space: nowrap;
     font-weight: 600;
     letter-spacing: -0.01em;
 }
 
 @media (max-width: 576px) {
-    .google-rating-badge {
-        padding: 0.625rem 1rem !important;
+    .google-official-badge {
+        padding: 0.5rem 0.75rem !important;
+        min-width: auto !important;
     }
 
-    .google-rating-badge span {
-        font-size: 0.875rem !important;
+    .google-official-badge span {
+        font-size: 0.8rem !important;
     }
 
-    .google-rating-badge .d-flex.gap-1 svg {
-        width: 16px;
-        height: 16px;
+    .google-official-badge svg[width="24"] {
+        width: 20px !important;
+        height: 20px !important;
     }
 
-    .google-rating-badge svg[width="28"] {
-        width: 22px !important;
-        height: 22px !important;
+    .google-official-badge .d-flex.gap-0 svg {
+        width: 12px;
+        height: 12px;
     }
 }
 
@@ -2765,5 +2763,77 @@ section {
     .header-promo-text {
         font-size: 10px !important;
         /* Force smaller size on mobile to fit one line */
+    }
+}
+
+/* ========================================================
+   FOOTER STYLES (Light Theme)
+   ======================================================== */
+
+footer {
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    /* Explicitly set white background for footer */
+}
+
+/* Ensure footer links have transition */
+.footer-links li {
+    transition: transform 0.2s ease;
+}
+
+.footer-links li:hover {
+    transform: translateX(5px);
+}
+
+.footer-links a,
+.footer-contact-list a {
+    transition: color 0.2s ease;
+    color: #6c757d;
+    /* Standard secondary gray */
+}
+
+.footer-links a:hover,
+.footer-contact-list a:hover {
+    color: #16a34a !important;
+    /* Green color on hover */
+}
+
+.social-icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    /* Light gray background */
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+}
+
+.social-icon-btn:hover {
+    background-color: #16a34a;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+    border-color: #16a34a;
+}
+
+.social-icon-btn i {
+    width: 18px;
+    height: 18px;
+}
+
+/* Specific footer responsive tweaks */
+@media (max-width: 767.98px) {
+    footer .col-md-6.text-center.text-md-end {
+        margin-top: 1rem;
+        text-align: center !important;
+    }
+
+    footer .list-inline-item {
+        margin: 0 10px;
     }
 }
